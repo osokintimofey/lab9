@@ -1,0 +1,36 @@
+﻿<button type="button" class="btn btn-success center-block" data-bind="click:refresh">Обновить</button>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Номер </th>
+                <th>Имя </th>
+                <th>Фамилия </th>
+                <th>Место проживания </th>
+                <th>Возраст</th>
+                <th>Дата регистрации</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: localusers">
+            <tr>
+                <td data-bind="text: id"></td>
+                <td data-bind="text: firstname"></td>
+                <td data-bind="text: lastname"></td>
+                <td data-bind="text: city"></td>
+                <td data-bind="text: age"></td>
+                <td data-bind="text: date"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container-fluid">
+        <input type="hidden" class="form-control center-block" placeholder="Номер" name="id" id="nowId" value="0" />
+        <input type="text" class="form-control center-block" placeholder="Имя" name="firstname" id="firstname">
+        <input type="text" class="form-control center-block" placeholder="Фамилия" name="lastname" id="lastname">
+        <input type="text" class="form-control center-block" placeholder="Место проживания " name="city" id="city">
+        <input type="text" class="form-control center-block" placeholder="Возраст" name="age" id="age">
+        <input type="text" class="form-control center-block" placeholder="Дата регистрации" name="date" id="date">
+
+        <button type="button" class="btn btn-default center-block" data-bind="click:add">Добавить</button>
+</div>
